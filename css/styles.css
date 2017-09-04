@@ -398,6 +398,11 @@ footer{
 	float: left;
 }
 
+.team_column a{
+	color: black;
+	font-size: 15px;
+}
+
 .team_column h2{
 	font-size: 12px;
 	margin-bottom: 0px;
