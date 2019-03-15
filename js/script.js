@@ -15,7 +15,7 @@ if(colorReserve){
 	logofolder = "white"
 }
 
-$(".logo").css("background-image", "url('img/logo/"+logofolder+"/logo"+Math.floor((Math.random() * 3) + 1)+".png')");
+$(".logo").css("background-image", "url('img/logo/"+logofolder+"/"+Math.floor((Math.random() * 3) + 1)+".png')");
 });
 
 $(window).scroll(init);
