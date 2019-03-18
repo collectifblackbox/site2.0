@@ -7,6 +7,24 @@
 
 
 //====================VARIABLE========================//
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+body{
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+}
+body::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
 html{
 
     width: 100%;
@@ -27,7 +45,7 @@ html{
         .light{
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         width: 100%;
@@ -36,12 +54,18 @@ html{
         #warpMenu{
             background: @black;
             width: 100%;
-            height: 120px;
+            height: 100px;
         }
 
         .wrapper{
             margin: 0 auto;
-            width: 95.7%;
+            width: 96vw;
+            position: relative;
+        }
+
+        .wrapped{
+            margin: 0 auto;
+            width: 94vw;
             position: relative;
         }
         .fixed{
@@ -51,7 +75,7 @@ html{
         }
         .full{
             margin: 0 auto;
-            width: 95.7%;
+            width: 96vw;
             z-index: 1;
             
         }
@@ -67,17 +91,17 @@ html{
 
     color: @black;
     float: left;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     .light;
-        width: 70px;
+    width: 70px;
     height: 70px;
     background-size: contain;
-        position: absolute;
+    position: absolute;
     left: 0;
 }
 .active{
-    color: @black !important;
+    color: @white !important;
 }
 .menu{
    float: right;
@@ -118,7 +142,7 @@ html{
     }
 }
 .blank{
-    margin-top: 119px;
+    margin-top: 99px;
     padding-top: 1px;
 }
 .all{
@@ -127,8 +151,7 @@ html{
 //====================PROJECTS GRID========================//
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
-  margin-bottom: 30px;
+  width: 33.333333%;
 }
 
 .grid-item {
@@ -136,27 +159,42 @@ html{
 }
 
 .grid-item-width {
-  width: 66.666%;
+  width:66.66666vw;
 }
 
 .item{
-    width: 94%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
+    background-color: @white;
+    border: 1vw solid @white;
 
     img{
         width: 100%;
         display: block;
     }
 
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; 
+        
+    &:hover{
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;                    
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+    }
 }
 
 .info{
     opacity: 0;
     bottom: 0; left: 0; top: 0; right: 0;
     position: absolute;
-    margin: 40px;
-    background-color: @white;
     z-index: 0;
 
     -webkit-transition: all 0.5s ease-in-out;
@@ -165,14 +203,24 @@ html{
     transition: all 0.5s ease-in-out;  
 
     h2{
-        font-size: 1.4em;
+        font-size: 1.2em;
         text-transform: uppercase;
-        color: @grey;
-        text-align: center;
+        color: @white;
+        text-align: left;
         position: relative;
         z-index: 2;
-        top: 46%;
         .light;
+        background-color: @black;
+    }
+    h3{
+        font-size: 0.8em;
+        text-transform: lowercase;
+        color: @white;
+        text-align: left;
+        position: relative;
+        z-index: 2;
+        .light;
+        background-color: @black;
     }
 
     &:hover{
@@ -181,8 +229,7 @@ html{
         -moz-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;                    
-        opacity: 0.95;
-
+        opacity: 1;
     }
 }
 //====================PROJECT========================//
@@ -267,7 +314,7 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 35px;
+    height: 2vw;
 }
 
 @media (max-height:800px) {
