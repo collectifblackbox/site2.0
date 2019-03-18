@@ -133,13 +133,13 @@ html body .all {
 }
 html body .grid-sizer,
 html body .grid-item {
-  width: 33.333333%;
+  width: 33.3333333%;
 }
 html body .grid-item {
   float: left;
 }
 html body .grid-item-width {
-  width: 66.66666vw;
+  width: 66.6666666%;
 }
 html body .item {
   width: 100%;
@@ -168,6 +168,9 @@ html body .item:hover {
   /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 }
+html body .empty div {
+  height: 16.5vw;
+}
 html body .info {
   opacity: 0;
   bottom: 0;
@@ -181,8 +184,21 @@ html body .info {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+html body .info mark {
+  background-color: #ffffff;
+  color: #050505;
+  font-style: normal !important;
+}
+html body .info mark::before {
+  content: " ";
+  white-space: pre;
+}
+html body .info mark::after {
+  content: " ";
+  white-space: pre;
+}
 html body .info h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-transform: uppercase;
   color: #050505;
   text-align: left;
@@ -191,10 +207,10 @@ html body .info h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 3px;
-  background-color: #ffffff;
+  line-height: 30px;
 }
 html body .info h3 {
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-transform: lowercase;
   color: #050505;
   text-align: left;
@@ -203,7 +219,7 @@ html body .info h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 3px;
-  background-color: #ffffff;
+  line-height: 21px;
 }
 html body .info:hover {
   -webkit-transition: all 0.5s ease-in-out;
@@ -211,6 +227,10 @@ html body .info:hover {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   opacity: 1;
+}
+html body .infos {
+  position: sticky;
+  top: 12%;
 }
 html body .text {
   width: 30%;
@@ -307,19 +327,21 @@ html body footer {
   html body .grid-sizer,
   html body .grid-item {
     width: 33.33333333%;
-    margin-bottom: 20px;
   }
   html body .grid-item-width {
     width: 66.66666666%;
   }
   html body .info {
-    opacity: 0.5;
+    opacity: 1;
   }
   html body .info h2 {
     color: #ffffff;
   }
   html body .ninja {
     display: none;
+  }
+  html body .empty div {
+    height: 16.5vw;
   }
   html body .text {
     width: 30%;
@@ -342,19 +364,15 @@ html body footer {
   html body .grid-sizer,
   html body .grid-item {
     width: 50%;
-    margin-bottom: 25px;
   }
   html body .grid-item-width {
     width: 100%;
   }
-  html body .info {
-    opacity: 0.5;
-  }
-  html body .info h2 {
-    color: #ffffff;
-  }
   html body .ninja {
     display: block;
+  }
+  html body .empty {
+    display: none;
   }
   html body .text {
     width: 100%;
@@ -413,16 +431,9 @@ html body footer {
   html body .grid-sizer,
   html body .grid-item {
     width: 100%;
-    margin-bottom: 20px;
   }
   html body .grid-item-width {
     width: 100%;
-  }
-  html body .info {
-    opacity: 0.5;
-  }
-  html body .info h2 {
-    color: #ffffff;
   }
   html body .mt1 {
     margin-top: 60px;

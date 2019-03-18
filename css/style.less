@@ -16,7 +16,8 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-  }
+}
+
 body{
     -ms-overflow-style: none;  // IE 10+
     overflow: -moz-scrollbars-none;  // Firefox
@@ -26,7 +27,6 @@ body::-webkit-scrollbar {
 }
 
 html{
-
     width: 100%;
     height: 100%;
 
@@ -151,7 +151,7 @@ html{
 //====================PROJECTS GRID========================//
 .grid-sizer,
 .grid-item {
-  width: 33.333333%;
+  width: 33.3333333%;
 }
 
 .grid-item {
@@ -159,7 +159,7 @@ html{
 }
 
 .grid-item-width {
-  width:66.66666vw;
+  width:66.6666666%;
 }
 
 .item{
@@ -190,6 +190,11 @@ html{
         filter: grayscale(0%);
     }
 }
+.empty{
+    div{
+        height: 16.5vw;
+    }
+}
 
 .info{
     opacity: 0;
@@ -202,25 +207,39 @@ html{
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;  
 
+    mark { 
+      background-color: @black;
+      color: @white;
+      font-style: normal !important;
+    }
+    mark::before{ 
+      content: " ";
+      white-space: pre;
+    }
+    mark::after{ 
+      content: " ";
+      white-space: pre;
+    }
+
     h2{
-        font-size: 1.2em;
+        font-size: 1.3em;
         text-transform: uppercase;
         color: @white;
         text-align: left;
         position: relative;
         z-index: 2;
         .light;
-        background-color: @black;
+        line-height: 30px;
     }
     h3{
-        font-size: 0.8em;
+        font-size: 0.9em;
         text-transform: lowercase;
         color: @white;
         text-align: left;
         position: relative;
         z-index: 2;
         .light;
-        background-color: @black;
+        line-height: 21px;
     }
 
     &:hover{
@@ -231,6 +250,10 @@ html{
         transition: all 0.5s ease-in-out;                    
         opacity: 1;
     }
+}
+.infos{
+        position: sticky;
+        top: 12%;
 }
 //====================PROJECT========================//
 
@@ -249,22 +272,17 @@ html{
         -webkit-transition: all 0.5s ease-in-out;
         -moz-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
-
         color: @grey;
         .light;
 
         &:hover{
-
             -webkit-transition: all 0.5s ease-in-out;
             -moz-transition: all 0.5s ease-in-out;
             -o-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;                    
             color: @black;
-
         }
     }           
-
-
 }
 
 .realisation{
@@ -352,14 +370,14 @@ footer{
 
 .grid-sizer,
 .grid-item {
-  width: 33.33333333%;
-  margin-bottom: 20px;
+  width:33.33333333%;
+  
 }
 .grid-item-width {
   width: 66.66666666%;
 }
 .info{
-    opacity: 0.5;
+    opacity: 1;
     h2{
         color: @black;
     }
@@ -368,6 +386,13 @@ footer{
 .ninja{
     display: none;
 }
+.empty{
+    div{
+        height: 16.5vw;
+    }
+}
+
+
 //====================PROJECT========================//
 .text{
     width: 30%;
@@ -399,19 +424,15 @@ footer{
 .grid-sizer,
 .grid-item {
     width: 50%;
-    margin-bottom: 25px;
 }
 .grid-item-width {
   width: 100%;
 }
-.info{
-    opacity: 0.5;
-    h2{
-        color: @black;
-    }
-}
 .ninja{
     display: block;
+}
+.empty{
+    display: none;
 }
 //====================PROJECT========================//
 .text{
@@ -488,16 +509,9 @@ footer{
 .grid-sizer,
 .grid-item {
     width: 100%;
-    margin-bottom: 20px;
 }
 .grid-item-width {
   width: 100%;
-}
-.info{
-    opacity: 0.5;
-    h2{
-        color: @black;
-    }
 }
 //====================PROJECT========================//
 
