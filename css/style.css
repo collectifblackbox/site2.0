@@ -122,6 +122,7 @@ html body .title h1 {
 }
 html body .blank {
   margin-top: 99px;
+  background: #010101;
 }
 html body .bottomblank {
   padding-top: 1vw;

@@ -32,6 +32,10 @@ if(colorReserve == 1){
   $("mark").css("color", "#fff");
   $(".contact h2").css("color", "#010101");
   $(".contact h3 a").css("color", "#010101");
+
+  $(".blank").css("background-color", "#fff");
+
+
   
   
   
