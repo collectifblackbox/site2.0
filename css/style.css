@@ -312,6 +312,7 @@ html body .project_team .team_column p {
 }
 html body .column_img {
   padding: 0.5vw;
+  margin-top: 100px;
 }
 html body .column_img .img {
   width: 100%;
