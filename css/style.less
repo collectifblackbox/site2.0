@@ -99,9 +99,7 @@ html{
     position: absolute;
     left: 0;
 }
-.active{
-    color: @white !important;
-}
+
 .menu{
    float: right;
 
@@ -119,8 +117,15 @@ html{
             color: @grey;
             display: block;
             .light;
-        }                  
+        } 
+        a.active{
+            color: @white ;
+        }               
     }
+    
+}
+.active{
+    color: @white ;
 }
 }
 //====================INDEX========================//
