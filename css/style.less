@@ -333,7 +333,7 @@ html{
         width: 100%;
         background: black;
         background-size:cover;
-        padding-top: 40%;
+        padding-top: 44.7%;
         margin-top:0.5vw;
         margin-bottom:0.5vw;
     }
@@ -613,35 +613,46 @@ footer{
     }
     .name{
         mark::before{ 
-          content: "";
+          content: " ";
           white-space: pre;
         }
         mark::after{ 
-          content: "";
+          content: " ";
           white-space: pre;
         }
     }
 }
 
-@media (max-width:480px) {
+@media (max-width:640px) {
     //====================INDEX========================//
-    .menu{
-        width: 100%;
-        float: left;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        ul{
-            li{
-                width: 33.3333%;
-                a{
-                    margin: 40px 0px 40px 0px;
-                }
+    #warpMenu
+    {
+        height: 150px;
+        .menu{
+            width: 100%;
+            float: left;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            ul{
+                margin: 70px 0%;
+                li{
+                    width: 33.3333%;
+                    text-align: center;
+                    a{
+                        margin: 40px 0px 40px 0px;
+                    }
 
+                }
             }
         }
+    }
+
+    .blank{
+        margin-top: 149px;
+        background: #010101;
     }
 
     .grid-sizer,
@@ -651,7 +662,52 @@ footer{
     .grid-item-width {
       width: 100%;
     }
+    .empty{
+        display: none !important;
+    }
     //====================PROJECT========================//
+    .content{
+        margin-top: 25px;
+        h1{
+            margin-bottom: 4vw;
+        }
+        h2{
+            margin-bottom: 2vw;
+        }
+
+        .team_column {
+            width: 50%;
+            margin-bottom: 2vw;
+        }
+    }
+    .column_img{
+            .img{
+                padding-top: 56.25%;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+            }
+        }
+        .dual{
+            div{
+                width: 100% !important;
+                padding-top: 56.25% !important;
+                float: left;
+            }
+        }
+        .triple{
+            div{
+                width: 100% !important;
+                padding-top: 56.25% !important;
+                float: left;
+            }
+        }
+    .name{
+        h2{
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            line-height: 20px;
+        }
+    }
 }
 }
 }

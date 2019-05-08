@@ -322,7 +322,7 @@ html body .column_img .img {
   width: 100%;
   background: black;
   background-size: cover;
-  padding-top: 40%;
+  padding-top: 44.7%;
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
 }
@@ -564,16 +564,19 @@ html body footer {
     width: 50%;
   }
   html body .name mark::before {
-    content: "";
+    content: " ";
     white-space: pre;
   }
   html body .name mark::after {
-    content: "";
+    content: " ";
     white-space: pre;
   }
 }
-@media (max-width: 480px) {
-  html body .menu {
+@media (max-width: 640px) {
+  html body #warpMenu {
+    height: 150px;
+  }
+  html body #warpMenu .menu {
     width: 100%;
     float: left;
     top: 0;
@@ -582,11 +585,19 @@ html body footer {
     bottom: 0;
     margin: auto;
   }
-  html body .menu ul li {
-    width: 33.3333%;
+  html body #warpMenu .menu ul {
+    margin: 70px 0%;
   }
-  html body .menu ul li a {
+  html body #warpMenu .menu ul li {
+    width: 33.3333%;
+    text-align: center;
+  }
+  html body #warpMenu .menu ul li a {
     margin: 40px 0px 40px 0px;
+  }
+  html body .blank {
+    margin-top: 149px;
+    background: #010101;
   }
   html body .grid-sizer,
   html body .grid-item {
@@ -594,5 +605,41 @@ html body footer {
   }
   html body .grid-item-width {
     width: 100%;
+  }
+  html body .empty {
+    display: none !important;
+  }
+  html body .content {
+    margin-top: 25px;
+  }
+  html body .content h1 {
+    margin-bottom: 4vw;
+  }
+  html body .content h2 {
+    margin-bottom: 2vw;
+  }
+  html body .content .team_column {
+    width: 50%;
+    margin-bottom: 2vw;
+  }
+  html body .column_img .img {
+    padding-top: 56.25%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+  html body .dual div {
+    width: 100% !important;
+    padding-top: 56.25% !important;
+    float: left;
+  }
+  html body .triple div {
+    width: 100% !important;
+    padding-top: 56.25% !important;
+    float: left;
+  }
+  html body .name h2 {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    line-height: 20px;
   }
 }
