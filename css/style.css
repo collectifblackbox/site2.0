@@ -275,6 +275,7 @@ html body .content {
   position: relative;
   margin-top: 100px;
   width: 90%;
+  display: contents;
 }
 html body .project_team {
   color: #ffffff;
